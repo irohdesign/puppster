@@ -9,15 +9,15 @@ function navbar() {
             </li>
 
             <li className="nav-item">
-                <Link to="/">About</Link>
+                <Link to="/about">About</Link>
             </li>
 
             <li className="nav-item">
-                <Link to="/">Discover</Link>
+                <Link to="/discover">Discover</Link>
             </li>
 
             <li className="nav-item">
-                <Link to="/">Search</Link>
+                <Link to="/search">Search</Link>
             </li>
         </ul>
 
