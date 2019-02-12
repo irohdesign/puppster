@@ -3,7 +3,7 @@ import React from "react";
 function searchResult(props) {
     return(
         <div>
-            <img src={props.src}></img>
+            <img alt={props.Title} src={props.img}></img>
         </div>
     )
 }

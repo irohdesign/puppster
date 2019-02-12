@@ -6,7 +6,7 @@ import APIsearch from "../utils/APIsearch";
 class searchPupContainer extends Component {
 
     state = {
-        searchResult: [],
+        result: [],
         search: "" 
     };
 
@@ -35,14 +35,14 @@ class searchPupContainer extends Component {
 
     render(){
         return (
-            <SearchRes
-                alt={this.state.searchResult}
-                src={this.state.searchResult}
-            >
+                <SearchRes
+                alt={this.state.result.Title}
+                src={this.state.result.img}
+                >
 
-            <p>{this.state.searchResult}</p>
-            </SearchRes>
-
+                <p>{this.state.result}</p>
+                </SearchRes>
+            
 
         );
 
