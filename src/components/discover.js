@@ -11,7 +11,12 @@ function discover(props) {
                 src={props.url}
                 
                 ></img>
+                <button
+                    className="btn btn-primary"
+                >Yes to all dogs always</button>
             </div>
+
+            <h2>Made friends with 0 pups so far!</h2>
         </div>
     )
 }
