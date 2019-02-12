@@ -16,4 +16,4 @@ function discover(props) {
     )
 }
 
-import default discover;
+export default discover;
