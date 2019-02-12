@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import NavTabs from "./components/NavTabs";
 import navbar from "./components/navbar";
 import about from "./components/about";
 import discover from "./components/discover";
@@ -7,7 +6,7 @@ import search from "./components/search";
 import APIrandom from "../utils/APIrandom";
 import APIsearch from "../utils/APIsearch";
 
-class pupContainer extends Component {
+class randoPupContainer extends Component {
 
     state = {
         searchResult: [],
