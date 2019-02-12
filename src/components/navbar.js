@@ -20,7 +20,6 @@ function navbar() {
                 <Link to="/search">Search</Link>
             </li>
         </ul>
-
     )
 }
 
