@@ -11,10 +11,12 @@ function search(props) {
                    className="form-control"
                    placeholder="Breeds"
                    id="search"
+                   onChange={props.handleInputChange}
+                   value={props.value}
                 >
                 </input>
                 <button
-                    // onSubmit={}
+                    onClick={props.handleFormSubmit}
                     className="btn btn-primary"
                 >Search</button>
             </div>

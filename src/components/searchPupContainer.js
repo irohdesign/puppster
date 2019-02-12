@@ -1,8 +1,6 @@
 import React, { Component } from "react";
-import navbar from "./components/navbar";
-import about from "./components/about";
-import discover from "./components/discover";
-import search from "./components/search";
+import search from "./search";
+import SearchRes from "./searchResult.js";
 import APIsearch from "../utils/APIsearch";
 
 class searchPupContainer extends Component {
@@ -37,7 +35,13 @@ class searchPupContainer extends Component {
 
     render(){
         return (
+            <SearchRes
+                alt={this.state.searchResult}
+                src={this.state.searchResult}
+            >
 
+            <p>{this.state.searchResult}</p>
+            </SearchRes>
 
 
         );
