@@ -1,29 +1,21 @@
 import React, { Component } from "react";
-import navbar from "./components/navbar";
+import Navbar from "./components/navbar";
 import about from "./components/about";
 import discover from "./components/discover";
 import search from "./components/search";
 import APIrandom from "../utils/APIrandom";
-import APIsearch from "../utils/APIsearch";
+
 
 class randoPupContainer extends Component {
 
     state = {
-        searchResult: [],
-        randomResult: {},
+           randomResult: {},
         search: "" 
     };
 
     componentDidMount() {
-        this.searchPups("corgi");
-        this.randomPups("corgi");
+         this.randomPups("corgi");
     }
-
-    searchPups = query => {
-        APIsearch.search(query)
-        .then(res => this.setState ({searchResult: res.data}))
-        .catch(err => console.log(err));
-    };
 
     randomPups = query => {
         APIrandom.search(query)
@@ -31,9 +23,21 @@ class randoPupContainer extends Component {
         .catch(err => console.log(err));
     };
 
-    handleInput
-
-    render()
+   handleButtonSubmit = event => {
+       event.preventDefault();
+       this.randomPups(this.state.search);
+   }
+ 
+    render(){
+        return
+        <div>
+            <discover> 
+            handleButtonSubmit = {this.handleButtonSubmit};
+            </discover>
+        </div>
+    }
 
 
 }
+
+export default randoPupContainer;

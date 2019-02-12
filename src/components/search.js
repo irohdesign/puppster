@@ -14,7 +14,7 @@ function search(props) {
                 >
                 </input>
                 <button
-                    onSubmit={}
+                    // onSubmit={}
                     className="btn btn-primary"
                 >Search</button>
             </div>

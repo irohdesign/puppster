@@ -3,20 +3,17 @@ import navbar from "./components/navbar";
 import about from "./components/about";
 import discover from "./components/discover";
 import search from "./components/search";
-import APIrandom from "../utils/APIrandom";
 import APIsearch from "../utils/APIsearch";
 
 class searchPupContainer extends Component {
 
     state = {
         searchResult: [],
-        randomResult: {},
         search: "" 
     };
 
     componentDidMount() {
         this.searchPups("corgi");
-        this.randomPups("corgi");
     }
 
     searchPups = query => {
@@ -25,15 +22,29 @@ class searchPupContainer extends Component {
         .catch(err => console.log(err));
     };
 
-    randomPups = query => {
-        APIrandom.search(query)
-        .then(res => this.setState ({randomResult: res.data}))
-        .catch(err => console.log(err));
+    handleInputChange = event => {
+        const name = event.target.name;
+        const value = event.target.value;
+        this.setState({
+            [name]: value
+        });
     };
 
-    handleInput
+    handleFormSubmit = event => {
+        event.preventDefault();
+        this.searchPups(this.state.search)
+    };
 
-    render()
+    render(){
+        return (
+
+
+
+        );
+
+    }
 
 
 }
+
+export default searchPupContainer;
